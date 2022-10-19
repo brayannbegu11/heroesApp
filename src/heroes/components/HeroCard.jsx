@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import 'animate.css';
+import "animate.css";
 export const HeroCard = ({
   id,
   superhero,
-  publisher,
   alter_ego,
   first_appearance,
   characters,
