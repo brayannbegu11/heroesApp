@@ -27,7 +27,7 @@ export default function SearchPage() {
         <div className="col-5">
           <h4>Searching</h4>
           <hr />
-          <form onSubmit={onSearchSubmit}>
+          <form onSubmit={onSearchSubmit} aria-label='form'>
             <input
               type="text"
               placeholder="Search a hero"
@@ -45,8 +45,8 @@ export default function SearchPage() {
           <h4>results</h4>
           <hr />
           {
-            q === ''?<div className="alert alert-primary">Search a hero</div>
-            : q.length > 0 && heroes.length === 0 && <div className="alert alert-danger">No hero with <b>{q}</b></div>
+            q === ''?<div className="alert alert-primary" aria-label="search-hero">Search a hero</div>
+            : q.length > 0 && heroes.length === 0 && <div className="alert alert-danger" aria-label="not-found">No hero with <b>{q}</b></div>
           }
           
           {
